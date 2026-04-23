@@ -7,18 +7,18 @@ Objective: Extract the Unicode code points of the first two characters of a stri
 add them together, and return the result.
 
 Instructions:
-Write a program that takes a string with at least two characters.
-Use charCodeAt to get the Unicode code points of the first two characters.
-Add the two code points together and assign the result to a variable named sumCodePoints.
+Write a program that takes a string with at least two characters. ^
+Use charCodeAt to get the Unicode code points of the first two characters.^
+Add the two code points together and assign the result to a variable named sumCodePoints.^
 Input:
 let inputString = "Hi";
 
 Expected Output:
 sumCodePoints: 177 // 'H' = 72, 'i' = 105, 72 + 105 = 177
 
-Exercise 2: Generate a String from Two Code Points
-Objective: Take two numeric Unicode code points,
-convert them to characters using String.fromCharCode,
+Exercise 2: Generate a String from Two Code Points ^
+Objective: Take two numeric Unicode code points, ^
+convert them to characters using String.fromCharCode,^
 and combine them into a single string.
 
 Instructions:
@@ -48,7 +48,25 @@ let index2 = 2;
 Expected Output:
 codePointDifference: 16 // 'C' = 67, 't' = 116, |67 - 116| = 16
 
+*/
 
+
+let practiceString = "Hello";
+let sumCodePoints = practiceString.charCodeAt(0) + practiceString.charCodeAt(1);
+console.log(sumCodePoints);
+
+let codePoint1 = 65;
+let codePoint2 = 66;
+let combinedString = String.fromCharCode(codePoint1) + String.fromCharCode(codePoint2);
+console.log(combinedString);
+
+let inputString = "Cat";
+let index1 = 0;
+let index2 = 2;
+let codePointDifference = Math.abs(inputString.charCodeAt(index1) - inputString.charCodeAt(index2));
+console.log(codePointDifference);
+
+/*
 
 Practice Problem #2
 
@@ -83,18 +101,19 @@ Assign the result to a variable named swappedString.
 
 */
 
+
 //Starter Code
 // Task 1
 let inputString1 = "Code";
-let firstCodePoint; // Your code here
-let thirdCodePoint; // Your code here
+let firstCodePoint = inputString1.charCodeAt(0); // 
+let thirdCodePoint = inputString1.charCodeAt(2); // 
 
 // Task 2
-let wordFromCodePoints; // Your code here
+let wordFromCodePoints = String.fromCharCode(74, 97, 118, 97, 83, 99, 114, 105, 112, 116); // Your code here
 
 // Task 3
 let inputString2 = "Launch";
-let swappedString; // Your code here
+let swappedString = String.fromCharCode(inputString2.charCodeAt(4)) + inputString2.slice(1, 4) + String.fromCharCode(inputString2.charCodeAt(0))  ; // Your code here
 
 // Log all results
 console.log({
